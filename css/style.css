@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+	/* Colors */
+	--primary-cyan: hsl(179, 62%, 43%);
+	--primary-light-cyan: hsl(180, 48%, 52%);
+	--primary-bright-yellow: hsl(71, 73%, 54%);
+	--neutral-light-gray: hsl(204, 43%, 93%);
+	--neutral-grayish-blue: hsl(218, 22%, 67%);
+	--neutral-white: hsl(0, 0%, 100%);
+
+	/* Typography */
+	--family-karla: "Karla", sans-serif;
+	--fw-400: 400;
+	--fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	min-height: 99vh;
+	font-family: var(--family-karla);
+	background-color: var(--neutral-light-gray);
+	color: var(--neutral-grayish-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	margin: auto 0;
+	width: 90%;
+	max-width: 43rem;
+	overflow: hidden;
+	border-radius: 7px;
+	box-shadow: 0 20px 20px 0px rgba(66, 66, 66, 0.15);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+
+.bg-white {
+	background-color: var(--neutral-white);
+}
+
+.bg-cyan {
+	background-color: var(--primary-cyan);
+}
+
+.bg-light-cyan {
+	background-color: var(--primary-light-cyan);
+}
+
+.bg-bright-yellow {
+	background-color: var(--primary-bright-yellow);
+}
+
+.text-cyan {
+	color: var(--primary-cyan);
+}
+
+.text-bright-yellow {
+	color: var(--primary-bright-yellow);
+}
+
+.text-white {
+	color: var(--neutral-white);
+}
+
+.text-light-gray {
+	color: var(--neutral-light-gray);
+}
+
+.join {
+	grid-row: 1;
+	grid-column: 1 / span 2;
+	padding: 2.5rem;
+}
+
+.subscribe {
+	grid-row: 2;
+	grid-column: 1;
+	padding: 2.5rem;
+}
+
+.why-us {
+	grid-row: 2;
+	grid-column: 2;
+	padding: 2.5rem;
+}
+
+.title {
+	font-size: 1.5rem;
+	font-weight: var(--fw-700);
+	margin-bottom: 1.3rem;
+}
+
+.subtitle {
+	font-size: 1.1rem;
+	font-weight: var(--fw-700);
+	margin-bottom: 1rem;
+}
+
+.desc {
+	font-size: 0.9rem;
+	font-weight: var(--fw-400);
+	line-height: 1.6rem;
+}
+
+.prices {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0.4rem;
+}
+
+.nominal {
+	font-size: 2rem;
+	font-weight: var(--fw-400);
+}
+
+.btn {
+	font-size: 1rem;
+	font-family: var(--family-karla);
+	font-weight: var(--fw-400);
+	padding: 1rem;
+	width: 100%;
+	margin-top: 2rem;
+	border-radius: 7px;
+	box-shadow: 0 10px 10px 0px rgba(27, 27, 27, 0.15);
+	cursor: pointer;
+}
+
+.btn:hover {
+	filter: brightness(1.1);
+	transition: 0.2s ease-in-out;
+	box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+li {
+	font-size: 0.9rem;
+	font-weight: var(--fw-400);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	color: hsl(0, 0%, 9%);
+}
+
+.attribution a {
+	color: var(--primary-cyan);
+}
+
+.attribution a:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 990px) {
+	main {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+
+	.join {
+		grid-row: 1;
+		grid-column: 1;
+		padding: 2rem;
+	}
+
+	.subscribe {
+		grid-row: 2;
+		grid-column: 1;
+		padding: 2rem;
+	}
+
+	.why-us {
+		grid-row: 3;
+		grid-column: 1;
+		padding: 2rem;
+	}
+
+	.subscribe .desc {
+		font-size: 1rem;
+	}
+}
